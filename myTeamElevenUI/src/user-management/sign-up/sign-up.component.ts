@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sign-up',
@@ -11,7 +11,7 @@ export class SignUpComponent implements OnInit {
   userName:String="";
   password1:String="";
   password2:String="";
-
+  @Output() user = new EventEmitter<any>();
   constructor() { }
 
   ngOnInit(): void {

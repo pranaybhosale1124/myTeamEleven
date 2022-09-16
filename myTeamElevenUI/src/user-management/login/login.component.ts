@@ -19,8 +19,8 @@ export class LoginComponent implements OnInit {
       this.user = user;
       this.isLoggedIn = (user != null);
       console.log("User--->",this.user);
+      sessionStorage.setItem("loggedInUser",JSON.stringify(this.user))
       this.router.navigate(['/signup'])
-      
     });
   }
 

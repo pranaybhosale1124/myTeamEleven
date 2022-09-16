@@ -4,16 +4,28 @@
   
   <mat-toolbar color="primary">
       <button mat-icon-button class="example-icon" (click)="snav.toggle()" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
+        <mat-icon>
+          menu
+        </mat-icon>
       </button>
       <span>My App</span>
       <span class="example-spacer"></span>
-      <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
         <mat-icon>favorite</mat-icon>
+      </button> -->
+      <button *ngIf="!loggedInUser;else logged_in_icon" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>
+          account_circle
+        </mat-icon>
       </button>
-      <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-      </button>
+      <ng-template #logged_in_icon>
+        <button  *ngIf="loggedInUser.photoUrl" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon id="profile-mat-icon">
+              <img id="profile-icon-image" [src]="loggedInUser.photoUrl"/>
+          </mat-icon>
+        </button>
+      </ng-template>
+     
   </mat-toolbar>
   
 </div>
@@ -21,7 +33,7 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
 
   <mat-sidenav-container class="example-sidenav-container"
-                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+                         [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
     <mat-sidenav class="main-sidenav" #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                  [fixedInViewport]="true" fixedTopGap="56">
      <app-side-navbar-list></app-side-navbar-list>
