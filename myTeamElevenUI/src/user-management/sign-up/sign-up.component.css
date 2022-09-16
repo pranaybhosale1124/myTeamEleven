@@ -1,0 +1,34 @@
+#visibility-button{
+    border: none;
+}
+
+.user-inputs{
+    width: 100%;
+}
+.login-container{
+    /* margin: auto;
+    padding: 100px 0;
+    width: 50%;
+    min-width: 280px; */
+    position: fixed;
+    height: auto;
+    width: 50%;
+    min-width: 280px;  
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);    
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+   
+}
+
+.login-buttons-container{
+    padding: 2%;
+    width:fit-content;
+    margin: auto;
+}
+
+.login-buttons{
+    background-color: rgb(12, 193, 12);
+}

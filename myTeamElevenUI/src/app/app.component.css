@@ -1,0 +1,21 @@
+.app-navbar{
+    position: sticky;
+    top: 0px
+}
+
+.example-spacer{
+    width: 100%;
+}
+
+.main-sidenav{
+    width: 25%;
+    min-width: 220px;
+}
+
+.mat-toolbar-row, .mat-toolbar-single-row{
+    height: 56px;
+}
+/* #gsi_459531_998797{
+    width: 48%;
+    background-color: blue;
+} */

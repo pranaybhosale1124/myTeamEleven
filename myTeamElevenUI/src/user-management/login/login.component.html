@@ -1,0 +1,22 @@
+<div class="login-container">
+    <div>
+        <mat-form-field class="user-inputs" appearance="fill">
+            <mat-label>USERNAME</mat-label>
+            <input matInput placeholder="" [(ngModel)]="userName">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="user-inputs" appearance="fill">
+            <mat-label>PASSWORD</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button id="visibility-button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+          </mat-form-field>
+    </div>
+        <button mat-raised-button color="primary" class="user-inputs login-buttons">LOGIN</button>
+    <div class="login-buttons-container">
+        <asl-google-signin-button type='standard' theme="filled_blue" size='medium' text="signup_with" width="250"></asl-google-signin-button>
+    </div>
+</div>
+
