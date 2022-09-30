@@ -1,1 +1,22 @@
-<p>all-contests works!</p>
+<div id="all-contests-container" *ngFor="let contest of allContests">
+    <div (click)="openContest(contest.contest_id)">
+        <mat-card>
+            <mat-grid-list cols="3" rowHeight="50px">
+                <mat-grid-tile>
+                    <button mat-mini-fab color="primary">
+                        {{contest.team1Data.team_initials}}
+                      </button>
+                </mat-grid-tile>
+                <mat-grid-tile>{{contest.start_time |  date:'HH:mm'}}</mat-grid-tile>
+                <mat-grid-tile>
+                    <button mat-mini-fab color="primary">
+                        {{contest.team2Data.team_initials}}
+                      </button>
+                </mat-grid-tile>
+              </mat-grid-list>
+              
+        </mat-card>
+    </div>
+</div>
+
+<!-- {{contest.team1Data.team_initials}} VS {{contest.team2Data.team_initials}} -->

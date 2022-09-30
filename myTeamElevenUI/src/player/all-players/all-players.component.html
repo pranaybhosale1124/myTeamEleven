@@ -1,0 +1,30 @@
+<div id="players-list-container" *ngFor="let player of allPlayers">
+    <mat-expansion-panel expanded="false" >
+        <mat-expansion-panel-header >
+            <mat-list>
+                <mat-list-item>
+                    <table>
+                        <tr >
+                          <td>{{ player.player_name }}</td>
+                          <td>{{ player.player_position }}</td>
+                          <td>{{ player.player_rating }}</td>
+                        </tr>
+                      </table>
+                </mat-list-item>
+            </mat-list>
+        </mat-expansion-panel-header>
+        <mat-list>
+            <mat-list-item>
+                <table>
+                    <tr >
+                      <td>{{ player.games_played }}</td>
+                      <td>{{ player.attack_points }}</td>
+                      <td>{{ player.defence_points }}</td>
+                    </tr>
+                  </table>
+            </mat-list-item>
+        </mat-list>
+    </mat-expansion-panel>
+</div>
+
+

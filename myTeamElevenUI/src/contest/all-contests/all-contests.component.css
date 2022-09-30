@@ -1,0 +1,7 @@
+#all-contests-container{
+    margin: 1%;
+}
+
+.mat-grid-tile-content{
+    display: inline-grid;
+}
